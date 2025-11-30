@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 
 
-app.get('/', (request, response) => {
-    response.send('<h1>Hello express!</h1>')
+app.get('/hello/:name', (request, response) => {
+    response.send(`<h1>Hello ${request.params.name}</h1>`)
 });
 
 app.get('/goodbye', (request, response) => {
