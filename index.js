@@ -8,7 +8,7 @@ app.get('/hello/:name', (request, response) => {
 });
 
 app.get('/goodbye', (request, response) => {
-    response.send(`<h1>Goodbye ${request.query.name}!</h1>`)
+    response.send(`<h1>Goodbye ${request.query.name ?? express}!</h1>`)
 });
 
 app.listen(80);
